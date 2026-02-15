@@ -1,0 +1,20 @@
+import java.util.Scanner;
+
+public class Main{
+    public static void main(String[] args){
+        Scanner sc= new Scanner(System.in);
+
+        System.out.print("Enter the First side of tringle: ");
+        double first= sc.nextDouble();
+
+        System.out.print("Enter the Second side of tringle: ");
+        double second= sc.nextDouble();
+
+        double c= Math.sqrt(Math.pow(first,2) + Math.pow(second,2));
+
+        System.out.println("Hypotenus of triangle: " + c);
+        
+        sc.close();
+
+    }
+}
