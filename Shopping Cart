@@ -1,0 +1,24 @@
+import java.util.Scanner;
+
+public class Main{
+    public static void main(String[] agrs){
+        Scanner sc= new Scanner(System.in);
+
+        System.out.print("What product you wanna purchase: ");
+        String productName= sc.nextLine();
+
+        System.out.print("What is the marked price of the your product: ");
+        double price= sc.nextDouble();
+
+        System.out.print("How many units of products you wanna buy: ");
+        int count= sc.nextInt();
+        sc.nextLine();
+
+        double total= price*count;
+
+        System.out.println("~BILL~");
+        System.out.println("Product you purchase: " + productName);
+        System.out.println("Total amount of your bill: " + total);
+        sc.close();
+    }
+}
