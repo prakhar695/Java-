@@ -1,0 +1,19 @@
+import java.util.Scanner;
+public class Main{
+    public static void main(String[] agr) {
+        int lenght;
+        int breath;
+        int area;
+
+        Scanner sc= new Scanner(System.in);
+
+        System.out.println("Enter the lenght of rectangle: ");
+        lenght = sc.nextInt();
+        System.out.println("Enter the breath of rectangle: ");
+        breath = sc.nextInt();
+
+        area=lenght*breath;
+
+        System.out.print("The area of the rectangle:" + area);
+
+    }
