@@ -1,0 +1,15 @@
+import java.util.Random;
+
+public class Main {
+    public static void main(String[] args) {
+
+        Random ra = new Random();
+        boolean isHead = ra.nextBoolean();
+
+        if (isHead) {
+            System.out.println("The call is for head");
+        } else {
+            System.out.println("Its tails");
+        }
+    }
+}
