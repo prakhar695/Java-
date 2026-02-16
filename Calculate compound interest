@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+public class compoundInterest {
+    public static void main(String[] args){
+        double amount;
+
+        Scanner sc= new Scanner(System.in);
+
+        System.out.print("Enter the principal amount: ");
+        double prin= sc.nextDouble();
+
+        System.out.print("Enter the rate of principal: ");
+        double rate= sc.nextDouble();
+
+        System.out.print("Enter the count: ");
+        double count= sc.nextDouble();
+
+        System.out.print("Enter the time duration: ");
+        int time= sc.nextInt();
+
+        amount= prin*Math.pow(1 + (rate/count),(count*time));
+        System.out.println("Amount compounded💸 :"+  amount);
+
+    }
+}
