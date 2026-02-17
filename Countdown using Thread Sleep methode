@@ -1,0 +1,17 @@
+import java.util.Scanner;
+
+public class newyearCountdown {
+    public static void main(String[] args) throws InterruptedException {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter the timer count: ");
+        int count = sc.nextInt();
+
+        for(int i=1; i<=count; i++){
+            System.out.println(i);
+            Thread.sleep(1000);
+        }
+        System.out.println("Happy new year✨");
+        sc.close();
+    }
+}
