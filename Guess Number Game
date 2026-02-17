@@ -1,0 +1,37 @@
+import java.util.Scanner;
+import java.util.Random;
+
+public class numberGuessingGame {
+    public static void main(String[] args) {
+
+        Random ra = new Random();
+        Scanner sc= new Scanner(System.in);
+
+        int ran = ra.nextInt(1,11);
+
+        int attempts = 0;
+
+        System.out.print("Enter the number: ");
+        int num = sc.nextInt();
+
+        while(attempts < 5){
+            if(num == ran){
+                System.out.println("Woww you win");
+                break;
+            }
+            else{
+                System.out.print("Re-enter the number: ");
+                num = sc.nextInt();
+
+                attempts +=1;
+            }
+
+            if(attempts==5){
+                System.out.println("You lost by overload attempts");
+            }
+
+        }
+
+        sc.close();
+    }
+}
