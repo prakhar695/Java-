@@ -1,0 +1,21 @@
+import java.util.Scanner;
+public class logicalOperations {
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter the userID: ");
+        String id = sc.next();
+
+        int len= id.length();
+
+        if(len>=4 && len<=12){
+            if(!id.contains(" ") && !id.contains("_")){
+                System.out.println("Valid userID");
+            }
+        }
+        else{
+            System.out.println("Invalid userID");
+        }
+        sc.close();
+    }
+}
