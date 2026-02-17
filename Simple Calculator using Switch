@@ -1,0 +1,26 @@
+import java.util.Scanner;
+public class calculator {
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter the first operand: ");
+        double a = sc.nextDouble();
+
+        System.out.print("Enter the second operand: ");
+        double b = sc.nextDouble();
+
+        System.out.println("Enter any of four operations: (/,*,+,-): ");
+        String opr = sc.next();
+
+        switch(opr){
+            case "/" -> System.out.println("Division of both operands is " + (a/b));
+            case "*" -> System.out.println("Multiplication of both operands is " + (a*b));
+            case "+" -> System.out.println("Addition of both operands is " + (a+b));
+            case "-" -> System.out.println("Substraction of both operands is " + (a-b));
+            default -> System.out.println("Incalid operation entered");
+
+        }
+
+        sc.close();
+    }
+}
