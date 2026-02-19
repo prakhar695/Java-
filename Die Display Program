@@ -1,0 +1,61 @@
+import java.util.Random;
+import java.util.Scanner;
+
+public class dice {
+//This one is corrected.
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		int numberOfDice;
+		System.out.print("Enter the number of dice to roll: ");
+		numberOfDice = scanner.nextInt();
+		rollDice(numberOfDice);
+		scanner.close();
+	}
+
+	static void rollDice(int numberOfDice) {
+		System.out.println("Rolling " + numberOfDice + " dice...");
+		Random random = new Random();
+		int sum = 0;
+		for (int i = 0; i< numberOfDice; i++) {
+			int face = random.nextInt(1, 7);
+			switch(face){
+			    case 1 -> System.out.println("-----\n"
+			    		+ "|   |\n"
+			    		+ "| o |\n"
+			    		+ "|   |\n"
+			    		+ "-----");
+			    case 2 -> System.out.println("-----\n"
+			    		+ "|o  |\n"
+			    		+ "|   |\n"
+			    		+ "|  o|\n"
+			    		+ "-----");
+			    case 3 -> System.out.println("-----\n"
+			    		+ "|o  |\n"
+			    		+ "| o |\n"
+			    		+ "|  o|\n"
+			    		+ "-----");
+			    case 4 -> System.out.println("-----\n"
+			    		+ "|o o|\n"
+			    		+ "|   |\n"
+			    		+ "|o o|\n"
+			    		+ "-----\n");
+			    case 5 -> System.out.println("-----\n"
+			    		+ "|o o|\n"
+			    		+ "| o |\n"
+			    		+ "|o o|\n"
+			    		+ "-----");
+			    case 6 -> System.out.println("-----\n"
+			    		+ "|o o|\n"
+			    		+ "|o o|\n"
+			    		+ "|o o|\n"
+			    		+ "-----");
+			    default -> System.out.println("An error ocurred during the rolling"
+			    		+ "of a dice. ");
+			}
+			System.out.println("You rolled: " + face );
+			sum += face;
+		}
+		System.out.println("\nYou chose to roll " + numberOfDice + " dice.");
+		System.out.println("Total of all rolls: " + sum );
+		
+}}
